@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(checks.checkValid(word)==4){
-                        //strength.setTextColor(Color.RED);
+                        strength.setTextColor(Color.RED);
                         strength.setText("Password Valid");
                     }
                     else {
-                        //strength.setTextColor(Color.GREEN);
+                        strength.setTextColor(Color.GREEN);
                         strength.setText("password not strong");
                     }
                 }

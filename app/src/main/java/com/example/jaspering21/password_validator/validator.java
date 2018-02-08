@@ -9,17 +9,17 @@ public class validator {
     private int count;
     public int checkValid(String password){
         word = password;
-        if(word.length()>8){
-            count++;
+        if(word.length()>8) {
+            count = 1;
         }
-        if(word.matches("[A-z]*")){
-            count++;
+        if (word.matches("[0-9]*")&&word.length()>8) {
+            count =2;
         }
-        if(word.matches("[a-z]*")){
-            count++;
+        if (word.matches("[a-z]*")&&word.matches("[0-9]*")&&word.length()>8) {
+            count = 3;
         }
-        if(word.matches("[!@#$%^&*()<>?,.]*")) {
-            count++;
+        if (word.matches("[!@#$%^&*()<>,./?]*")&&word.matches("[a-z]*")&&word.matches("[0-9]*")&&word.length()>8) {
+            count = 4;
         }
         if(word.equals("password")){
             return 0;
