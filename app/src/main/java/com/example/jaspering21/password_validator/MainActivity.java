@@ -21,16 +21,16 @@ public class MainActivity extends AppCompatActivity {
         validate = (Button) findViewById(R.id.button);
         strength = (TextView) findViewById(R.id.textView);
         password = (EditText) findViewById(R.id.editText);
-
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                validator checks = new validator();
                 String word = password.getText().toString();
-                if(word.length()<8||word.equals("password")){
+                if(checks.checkValid(word)==0){
                     strength.setText("Use another password");
                 }
                 else{
-                    if(word.matches("[a-zA-Z0-9!@#$%^&*]*")){
+                    if(checks.checkValid(word)==4){
                         //strength.setTextColor(Color.RED);
                         strength.setText("Password Valid");
                     }
