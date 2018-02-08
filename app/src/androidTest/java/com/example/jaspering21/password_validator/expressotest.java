@@ -25,19 +25,19 @@ public class expressotest {
         onView(withId(R.id.textView)).check(matches(withText("pass")));
     }
     public void check1(){
-        onView(withId(R.id.textView)).perform(typeText("12345678"),closeSoftKeyboard());
+        onView(withId(R.id.textView)).perform(typeText("1234567891"),closeSoftKeyboard());
         onView(withId(R.id.button)).perform(click());
-        onView(withId(R.id.textView)).check(matches(withText("12345678")));
+        onView(withId(R.id.textView)).check(matches(withText("1234567891")));
     }
     public void check2(){
-        onView(withId(R.id.textView)).perform(typeText("jafafaf123"),closeSoftKeyboard());
+        onView(withId(R.id.textView)).perform(typeText("jafafaffaff"),closeSoftKeyboard());
         onView(withId(R.id.button)).perform(click());
-        onView(withId(R.id.textView)).check(matches(withText("jafafaf123")));
+        onView(withId(R.id.textView)).check(matches(withText("")));
     }
     public void check3(){
-        onView(withId(R.id.textView)).perform(typeText("jafafFf123"),closeSoftKeyboard());
+        onView(withId(R.id.textView)).perform(typeText("jazz12345"),closeSoftKeyboard());
         onView(withId(R.id.button)).perform(click());
-        onView(withId(R.id.textView)).check(matches(withText("jafafFf123")));
+        onView(withId(R.id.textView)).check(matches(withText("jazz12345")));
     }
     public void check4(){
         onView(withId(R.id.textView)).perform(typeText("Jazz@1995"),closeSoftKeyboard());

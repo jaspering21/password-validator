@@ -30,14 +30,8 @@ public class MainActivity extends AppCompatActivity {
                     strength.setText("Use another password");
                 }
                 else{
-                    if(checks.checkValid(word)==4){
-                        strength.setTextColor(Color.RED);
-                        strength.setText("Password Valid");
-                    }
-                    else {
                         strength.setTextColor(Color.GREEN);
                         strength.setText("password not strong");
-                    }
                 }
             }
         }

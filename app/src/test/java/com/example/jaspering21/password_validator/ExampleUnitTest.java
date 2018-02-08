@@ -29,28 +29,28 @@ public class ExampleUnitTest {
     public void ValidateOne()throws Exception
     {
         validator val = new validator();
-        String password = "12345678";
-        assertEquals(1,val.checkValid(password));
-    }
-    @Test
-    public void ValidateTwo()throws Exception
-    {
-        validator val = new validator();
-        String password = "jafafaf123";
-        assertEquals(2,val.checkValid(password));
+        String password = "1234567891";
+        assertEquals(3,val.checkValid(password));
     }
     @Test
     public void ValidateThree()throws Exception
     {
         validator val = new validator();
-        String password = "jafafFf123";
+        String password = "faaafafafa";
         assertEquals(3,val.checkValid(password));
     }
     @Test
     public void ValidateFour()throws Exception
     {
         validator val = new validator();
-        String password = "Jazz@1995";
+        String password = "jazzafa123";
         assertEquals(4,val.checkValid(password));
+    }
+    @Test
+    public void ValidateFive()throws Exception
+    {
+        validator val = new validator();
+        String password = "Jazzafa123";
+        assertEquals(5,val.checkValid(password));
     }
 }
